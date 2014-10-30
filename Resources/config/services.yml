@@ -1,0 +1,11 @@
+parameters:
+    # Pager
+    ongr_pager.pager_extension.class: ONGR\PagerBundle\Twig\PagerExtension
+
+services:
+    ongr_pager.pager_extension:
+        class: %ongr_pager.pager_extension.class%
+        arguments:
+            - @router
+        tags:
+            - { name: twig.extension }
